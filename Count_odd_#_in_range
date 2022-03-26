@@ -1,0 +1,7 @@
+def countOdds(low: int, high: int) -> int:
+    if low % 2 == 0:
+        low += 1
+    answer = ((high + 1) - low) // 2
+    if high % 2 == 1:
+        return answer + 1
+    return answer
