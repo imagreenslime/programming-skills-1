@@ -1,0 +1,9 @@
+def nearestValidPoint(x, y, points):
+    lowest, temp2 = float('inf'), -1
+    for b, a in enumerate(points):
+        if a[0] == x or a[1] == y:
+            temp = abs((a[0] - x) + a[1] - y)
+            if temp < lowest:
+                lowest, temp2 = temp, b
+    return temp2
+# must return the index not distance
