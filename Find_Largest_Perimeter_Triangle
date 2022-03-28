@@ -1,6 +1,10 @@
+# https://leetcode.com/problems/largest-perimeter-triangle/
 def largestPerimeter(nums):
+    # a triangle can be made if the 2 shorter legs are larger then the hypotenuse
     nums = (sorted(nums, reverse=True))
     for a in range(len(nums) - 2):
         if nums[a + 1] + nums[a + 2] > nums[a]:
+            # starting from the largest, check if the 2 shorter add up to the larger
+            # if so, return them
             return sum(nums[a:a + 3])
     return 0
