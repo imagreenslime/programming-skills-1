@@ -1,0 +1,10 @@
+def areAlmostEqual(s1, s2):
+    s1, s2 = list(s1), list(s2)
+    b = []
+    for a in range(len(s1)):
+        if s1[a] != s2[a]:
+            b.append(a) 
+    if len(b) == 2:
+        s1[b[0]], s1[b[1]] = s1[b[1]], s1[b[0]]
+    return s1 == s2
+# the strings are equal lengths
