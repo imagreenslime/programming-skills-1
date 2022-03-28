@@ -1,10 +1,15 @@
+# https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/
 def areAlmostEqual(s1, s2):
     s1, s2 = list(s1), list(s2)
+    # they need to be a list so we can swap the letters later in the code
     b = []
     for a in range(len(s1)):
         if s1[a] != s2[a]:
             b.append(a) 
+            # we track down the index of each difference in the two strings to later swap them
     if len(b) == 2:
+    # if there are more then 2 differences, 1 string swap cannot make them equal, thus making them False
         s1[b[0]], s1[b[1]] = s1[b[1]], s1[b[0]]
+        # we swap the 2 letters in the string to see if they are equal
     return s1 == s2
-# the strings are equal lengths
+# false if false and true if true
