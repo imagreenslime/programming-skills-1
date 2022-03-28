@@ -1,9 +1,12 @@
+# https://leetcode.com/problems/find-nearest-point-that-has-the-same-x-or-y-coordinate/
 def nearestValidPoint(x, y, points):
     lowest, temp2 = float('inf'), -1
+    # 
     for b, a in enumerate(points):
         if a[0] == x or a[1] == y:
             temp = abs((a[0] - x) + a[1] - y)
+            # if the X or the Y is the same as the target, we find the distance from the target
             if temp < lowest:
                 lowest, temp2 = temp, b
+                # we use this to find the minimum distance and save the index of the points
     return temp2
-# must return the index not distance
