@@ -1,0 +1,7 @@
+def canMakeArithmeticProgression(arr):
+    arr = sorted(arr)
+    curr = arr[0] - arr[1]
+    for a in range(len(arr) - 1):
+        if arr[a] - arr[a + 1] != curr:
+            return False
+    return True
