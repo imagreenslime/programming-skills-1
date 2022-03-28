@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence/
 def canMakeArithmeticProgression(arr):
     arr = sorted(arr)
     curr = arr[0] - arr[1]
