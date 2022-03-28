@@ -1,0 +1,9 @@
+def subtractProductAndSum(n):
+    number = []
+    mult = 1
+    while n > 0:
+        number.insert(0, n % 10)
+        n = n // 10
+    for a in number:
+        mult *= a
+    return((mult) - sum(number))
